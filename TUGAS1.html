@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 500px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <center><h3>L200150121 - LOKASI RUMAH KRAJAN </h3></center>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var rumahku = {lat: -7.6074154, lng: 110.749259};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: rumahku
+        });
+        var marker = new google.maps.Marker({
+          position: rumahku,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCxE8MiYmvdxgYp0xyKNb77rMsZQmYfC4g&callback=initMap">
+    </script>
+  </body>
+</html>
